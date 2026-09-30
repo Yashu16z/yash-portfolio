@@ -1421,8 +1421,8 @@
             </ul>
           </div>
 
-          <button class="btn-secondary" style="width:100%; justify-content:center;" onclick="selectPackage('One-Page Sprint (₹4,999)')">
-            Book One-Page Sprint →
+          <button id="btnBookOnePage" class="btn-secondary" style="width:100%; justify-content:center;" onclick="selectPackage('One-Page Sprint (₹4,999)')">
+            Book One-Page Build →
           </button>
         </div>
 
@@ -1449,7 +1449,7 @@
             </ul>
           </div>
 
-          <button class="btn-cta" style="width:100%; justify-content:center;" onclick="selectPackage('Full Website / AI Build (₹9,999)')">
+          <button id="btnBookFullBuild" class="btn-cta" style="width:100%; justify-content:center;" onclick="selectPackage('Full Website / AI Build (₹9,999)')">
             Book Full Build →
           </button>
         </div>
@@ -1930,18 +1930,37 @@
       switchFormTab('client');
       const pages = document.getElementById('auditPages').value;
       const packageSelect = document.getElementById('selectedPackage');
-      if (pages === '1page') {
-        packageSelect.value = 'One-Page Sprint (₹4,999)';
-      } else {
-        packageSelect.value = 'Full Website / AI Build (₹9,999)';
+      if (packageSelect) {
+        if (pages === '1page') {
+          packageSelect.value = 'One-Page Sprint (₹4,999)';
+        } else {
+          packageSelect.value = 'Full Website / AI Build (₹9,999)';
+        }
       }
-      document.getElementById('intake').scrollIntoView({ behavior: 'smooth' });
+      const intakeEl = document.getElementById('intake');
+      if (intakeEl) {
+        intakeEl.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(() => {
+        const clientName = document.getElementById('clientName');
+        if (clientName) clientName.focus();
+      }, 400);
     }
 
     function selectPackage(pkg) {
       switchFormTab('client');
       const packageSelect = document.getElementById('selectedPackage');
-      packageSelect.value = pkg;
+      if (packageSelect) {
+        packageSelect.value = pkg;
+      }
+      const intakeEl = document.getElementById('intake');
+      if (intakeEl) {
+        intakeEl.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(() => {
+        const clientName = document.getElementById('clientName');
+        if (clientName) clientName.focus();
+      }, 400);
     }
 
     // Modal logic
