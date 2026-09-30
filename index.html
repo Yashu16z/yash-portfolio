@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Yash Srivastava — Frontend Developer & AI Web Creator</title>
+  <title>Yash Srivastava — Web Developer, UI/UX Designer & Mobile App Developer</title>
+  <meta name="description" content="Yash Srivastava — Web Developer, UI/UX Designer & Mobile App Developer based in Gurugram, India. Specializing in fast, responsive websites, Figma prototypes, and native Android apps.">
+
+  <!-- Open Graph / Social Link Previews -->
+  <meta property="og:title" content="Yash Srivastava — Web Developer & UI/UX Designer">
+  <meta property="og:description" content="BCA Student at NCU Gurugram. Fast web sprints (24–48h delivery), modern UI/UX design in Figma, and native Android engineering.">
+  <meta property="og:url" content="https://yashu16z.github.io/yash-portfolio/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yash Srivastava — Web Developer & UI/UX Designer">
+  <meta name="twitter:description" content="BCA Student at NCU Gurugram. Fast web sprints (24–48h delivery), modern UI/UX design in Figma, and native Android engineering.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1365,6 +1376,194 @@
       color: var(--text-secondary);
       margin: 0;
     }
+
+    /* Speed Comparison Badge */
+    .speed-badge-container {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .speed-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-card);
+      font-size: 0.86rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .speed-badge:hover {
+      border-color: var(--accent-emerald);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+    }
+
+    .speed-tag-before {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .speed-tag-before .badge-strike {
+      text-decoration: line-through;
+      color: var(--required-red);
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .speed-divider {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .speed-tag-after {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-emerald);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Keyframe Animations & Micro-Interactions */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatGently {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(14, 165, 233, 0);
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .hero h1 span.gradient-text {
+      background: linear-gradient(135deg, var(--accent) 0%, #38bdf8 35%, #a855f7 70%, var(--accent) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 6s ease infinite;
+    }
+
+    .status-pill {
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero h1 {
+      animation: fadeInUp 0.8s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero p.lead {
+      animation: fadeInUp 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-tags {
+      animation: fadeInUp 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-cta-group {
+      animation: fadeInUp 0.8s 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .metric-bar {
+      animation: fadeInUp 0.8s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .speed-badge-container {
+      animation: fadeInUp 0.8s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .floating-whatsapp {
+      animation: floatGently 4s ease-in-out infinite;
+    }
+
+    .floating-whatsapp .online-indicator {
+      animation: pulseGlow 2s infinite;
+    }
+
+    /* Scroll Reveal Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered Children Animations */
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-stagger.active > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.active > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.active > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.active > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.active > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.active > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+
+    /* Accessible Motion Override */
+    @media (prefers-reduced-motion: reduce) {
+      *, .reveal, .reveal-stagger > *, .hero h1 span.gradient-text, .status-pill, .hero h1, .hero p.lead, .hero-tags, .hero-cta-group, .metric-bar, .speed-badge-container, .floating-whatsapp, .floating-whatsapp .online-indicator {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1454,10 +1653,24 @@
           <span class="metric-label">Fast website delivery sprint</span>
         </div>
       </div>
+
+      <!-- Before/After Speed Comparison Badge -->
+      <div class="speed-badge-container">
+        <div class="speed-badge">
+          <span class="speed-tag-before">
+            <span>🐌 Before:</span>
+            <span class="badge-strike">4.2s load time on WordPress</span>
+          </span>
+          <span class="speed-divider">➔</span>
+          <span class="speed-tag-after">
+            <span>⚡ After: <strong>0.4s custom sprint</strong> (10x Faster)</span>
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- Featured Projects (from Resume) -->
-    <section id="projects">
+    <section id="projects" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Portfolio & Work</span>
         <h2 class="section-title">Featured Engineering & Design Projects</h2>
@@ -1466,7 +1679,7 @@
         </p>
       </div>
 
-      <div class="work-grid">
+      <div class="work-grid reveal-stagger">
         <!-- Project 1: TrackIt Native Android Budget Tracker -->
         <div class="project-card">
           <div class="project-preview">
@@ -1649,7 +1862,7 @@
     </section>
 
     <!-- Technical Skills & Proficiency Matrix -->
-    <section id="skills">
+    <section id="skills" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Core Competencies</span>
         <h2 class="section-title">Technical Skills & Tooling</h2>
@@ -1658,7 +1871,7 @@
         </p>
       </div>
 
-      <div class="skills-section-grid">
+      <div class="skills-section-grid reveal-stagger">
         <!-- Frontend Development -->
         <div class="skill-card">
           <h4><span>🌐</span> Web & Frontend Development</h4>
@@ -1721,7 +1934,7 @@
     </section>
 
     <!-- Education, Experience & Certifications -->
-    <section id="experience">
+    <section id="experience" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Career Milestones</span>
         <h2 class="section-title">Experience & Education</h2>
@@ -1730,7 +1943,7 @@
         </p>
       </div>
 
-      <div class="experience-grid">
+      <div class="experience-grid reveal-stagger">
         <!-- Education: NCU Gurugram -->
         <div class="exp-card">
           <div class="exp-header">
@@ -1824,7 +2037,7 @@
     </section>
 
     <!-- Interactive Scope & Estimate Tool -->
-    <section id="calculator">
+    <section id="calculator" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Sprint Estimator</span>
         <h2 class="section-title">Calculate Your Website Sprint & Scope</h2>
@@ -1892,7 +2105,7 @@
     </section>
 
     <!-- Pricing / Service Packages -->
-    <section id="pricing">
+    <section id="pricing" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Starter Pricing</span>
         <h2 class="section-title">Accessible Web Sprint Packages</h2>
@@ -1901,7 +2114,7 @@
         </p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid reveal-stagger">
         <!-- Tier 1 -->
         <div class="pricing-card">
           <div class="pricing-header">
@@ -1987,7 +2200,7 @@
     </section>
 
     <!-- 4-Step Transparent Client Process -->
-    <section id="process">
+    <section id="process" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Client Roadmap</span>
         <h2 class="section-title">How We Work Together (4-Step Sprint)</h2>
@@ -1996,7 +2209,7 @@
         </p>
       </div>
 
-      <div class="process-grid">
+      <div class="process-grid reveal-stagger">
         <div class="process-card">
           <div class="process-step-num">01</div>
           <h3 class="process-title">15-Min Scope & Brief</h3>
@@ -2032,7 +2245,7 @@
     </section>
 
     <!-- Client FAQ Accordion -->
-    <section id="faq">
+    <section id="faq" class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Frequently Asked Questions</span>
         <h2 class="section-title">Everything You Need to Know</h2>
@@ -2041,7 +2254,7 @@
         </p>
       </div>
 
-      <div class="faq-list">
+      <div class="faq-list reveal-stagger">
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>Why choose a custom coded sprint over WordPress or Wix templates?</span>
@@ -2095,7 +2308,7 @@
     </section>
 
     <!-- Intake & Contact Form System -->
-    <section id="intake">
+    <section id="intake" class="reveal">
       <div class="contact-box">
         <!-- Form Tabs -->
         <div class="form-tabs">
@@ -2544,6 +2757,30 @@
       if (item) {
         item.classList.toggle('active');
       }
+    }
+
+    // Scroll-Triggered Reveal Animations via IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        revealObserver.observe(el);
+      });
+    } else {
+      // Fallback for older browsers
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+        el.classList.add('active');
+      });
     }
   </script>
 
